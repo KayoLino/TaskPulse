@@ -1,0 +1,107 @@
+@keyframes transition {
+  from {
+    opacity: 0;
+    margin-top: 0;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 5%;
+  }
+}
+
+.conteiner-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  animation-name: transition;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.conteiner-register .register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.conteiner-register img {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.conteiner-register img:hover {
+  width: 405px;
+}
+
+.conteiner-register .register h1 {
+  font-size: 2.5rem;
+  color: rgb(9, 94, 128);
+  cursor: pointer;
+}
+
+.conteiner-register .register input {
+  width: 350px;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 15px;
+  border: solid 3px rgb(51, 143, 104);
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  transition: all 0.5s ease;
+}
+
+.conteiner-register .register input::placeholder {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+}
+
+.conteiner-register .register input:focus::placeholder {
+  color: transparent;
+}
+
+.conteiner-register .register input:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.conteiner-register .register button {
+  padding: 10px;
+  border: solid 4px rgb(94, 174, 228);
+  border-radius: 10px;
+  font-family: "Fredoka", sans-serif;
+  color: rgb(94, 174, 228);
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.conteiner-register .register button:hover {
+  background-color: rgb(94, 174, 228);
+  color: white;
+}
+
+.conteiner-register .login-page {
+  margin-top: 20px;
+  color: rgb(51, 99, 187);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.conteiner-register .login-page:hover {
+  color: rgb(40, 79, 151);
+  font-size: 1.02rem;
+}
+
+.conteiner-register .register .messageError {
+  color: rgb(219, 26, 26);
+  font-size: 1.2rem;
+  font-weight: 600;
+}

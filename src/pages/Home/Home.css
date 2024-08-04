@@ -1,0 +1,80 @@
+@keyframes conteiner {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.conteiner {
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  transition: opacity 0.5s ease;
+  animation-name: conteiner;
+  animation-duration: 2s;
+
+}
+
+.conteiner img {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.conteiner img:hover {
+  width: 420px;
+}
+
+.conteiner .content {
+  margin-top: 30px;
+  position: relative;
+}
+
+.conteiner .content .comment h1.fade-out {
+  opacity: 0;
+}
+
+.conteiner .content .comment h1 {
+  color: rgb(9, 94, 128);
+  margin-bottom: 20px;
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+.conteiner .content .comment h1:hover {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.conteiner .content .comment {
+  background-color: rgb(255, 255, 255);
+  width: 800px;
+  padding: 20px;
+  border: solid 2px rgb(102, 199, 238);
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+.conteiner .content .comment .enter {
+  margin-top: 40px;
+}
+
+.conteiner .content .comment .enter .entry-now {
+  background-color: rgb(59, 190, 207);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.conteiner .content .comment .enter .entry-now:hover {
+  font-size: 1.4rem;
+}

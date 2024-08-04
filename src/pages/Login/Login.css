@@ -1,0 +1,123 @@
+@keyframes transition {
+  from {
+    opacity: 0;
+    margin-top: 0;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 5%;
+  }
+}
+
+.content-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  animation-name: transition;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.content-login img {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: all 0.5s ease;
+}
+
+.content-login img:hover {
+  width: 405px;
+}
+
+.content-login .login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  height: auto;
+}
+
+.content-login .login h1 {
+  font-size: 2.5rem;
+  color: rgb(9, 94, 128);
+  cursor: pointer;
+}
+
+.content-login .login input {
+  width: 350px;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 15px;
+  border: solid 3px rgb(51, 143, 104);
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  transition: all 0.5s ease;
+}
+
+.content-login .login input:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.content-login .login input::placeholder {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+}
+
+.content-login .login input:focus::placeholder {
+  color: transparent;
+}
+
+.content-login .login .send-form {
+  padding: 10px;
+  border: solid 4px rgb(94, 174, 228);
+  border-radius: 10px;
+  font-family: "Fredoka", sans-serif;
+  color: rgb(94, 174, 228);
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.content-login .login .send-form:hover {
+  background-color: rgb(94, 174, 228);
+  color: white;
+}
+
+.content-login .links {
+  margin-top: 20px;
+  display: flex;
+}
+
+.content-login .links .register {
+  color: rgb(51, 99, 187);
+  text-decoration: underline;
+  margin-right: 50px;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.content-login .links .forgot-password {
+  color: rgb(51, 99, 187);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.content-login .links .register:hover,
+.forgot-password:hover {
+  color: rgb(40, 79, 151);
+  font-size: 1.02rem;
+
+}
+
+.content-login .login .messageError {
+  color: rgb(219, 26, 26);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
