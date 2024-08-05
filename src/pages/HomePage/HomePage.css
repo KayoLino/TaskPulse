@@ -5,7 +5,8 @@
   overflow-x: hidden;
   z-index: 2000;
   position: fixed;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  border-right: 1px solid rgb(173, 189, 196);
 }
 
 .sidebar.close {
@@ -23,7 +24,6 @@
   margin: 20px 0;
   font-size: 1.5rem;
   font-weight: 600;
-  transition: all 0.3s ease;
 }
 
 .sidebar .conteiner-sidebar .logo:hover {
@@ -37,15 +37,14 @@
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
-}
 
+}
 
 .sidebar .conteiner-sidebar .logo div {
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
 }
-
 
 .sidebar .conteiner-sidebar .logo div span {
   color: green;
@@ -57,6 +56,7 @@
 }
 
 .sidebar .conteiner-sidebar .profile {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +66,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 
 .sidebar .conteiner-sidebar .profile img {
   width: 200px;
@@ -94,9 +93,10 @@
 }
 
 .sidebar .conteiner-sidebar .menu-sidebar li {
+  width: 100%;
   cursor: pointer;
   height: 65px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .sidebar .conteiner-sidebar .menu-sidebar li a {
@@ -114,9 +114,6 @@
   color: rgb(68, 164, 202);
 }
 
-
-
-
 .sidebar.close .conteiner-sidebar .menu-sidebar li a span {
   display: none;
 }
@@ -133,6 +130,95 @@
   justify-content: center;
 }
 
+.sidebar .conteiner-sidebar .logout {
+  background-color: red;
+}
+
 .sidebar .conteiner-sidebar .logout .bx {
   color: red;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 260px);
+  position: fixed;
+  height: 80px;
+  left: 260px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+.navbar.large {
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.navbar .bx-menu {
+  font-size: 3rem;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar .bx-menu:hover {
+  color: rgb(93, 177, 202);
+}
+
+.navbar input {
+  font-family: "Fredoka", sans-serif;
+  width: 600px;
+  height: 40px;
+  font-size: 1rem;
+  border: none;
+  background-color: rgb(226, 226, 226);
+  border-radius: 15px 0 0 15px;
+  margin-left: 300px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar input:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+.navbar input:focus {
+  border: none;
+  outline: none;
+}
+
+.navbar button {
+  outline: none;
+  border: none;
+  background-color: rgb(93, 177, 202);
+  color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 0 15px 15px 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: rgb(77, 148, 170)
+}
+
+.navbar .bx-bell {
+  font-size: 2rem;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  margin-left: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar .bx-bell:hover {
+  color: gold;
 }

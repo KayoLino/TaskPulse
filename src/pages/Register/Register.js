@@ -74,7 +74,7 @@ const Register = () => {
 
       <form type="submit" onSubmit={handleSubmit} action="#" className="register">
         <h1>Registro</h1>
-        <input type="text" placeholder="Usuário"
+        <input type="text" placeholder="Nome Completo"
           value={username}
           onChange={(e) => {
             setUserName(e.target.value);

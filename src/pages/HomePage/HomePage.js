@@ -10,6 +10,11 @@ const HomePage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [username, setUsername] = useState('');
+  const [isSidebarClosed, setIsSidebarClosed] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsSidebarClosed(!isSidebarClosed);
+  }
 
   useEffect(() => {
 
@@ -25,30 +30,42 @@ const HomePage = () => {
   }, [navigate, id]);
 
   return (
-    <div className="sidebar ">
-      <div className="conteiner-sidebar">
-        <div className="logo">
-          <i class='bx bx-crown'></i>
-          <div>T<span>a</span>skPulse</div>
+    <>
+      {/* SideBar */}
+      <div className={`sidebar ${isSidebarClosed ? 'close' : ''}`}>
+        <div className="conteiner-sidebar">
+          <div className="logo">
+            <i className='bx bx-crown'></i>
+            <div>T<span>a</span>skPulse</div>
+          </div>
+
+          <div className="profile">
+            <img src={Profile} alt="" />
+            <div>{username}</div>
+          </div>
+
+          <ul className="menu-sidebar">
+            <li><Link><i className='bx bx-user-circle'></i><span>Editar Perfil</span> </Link></li>
+            <li><Link><i className='bx bx-cog' ></i><span>Configurações</span></Link></li>
+            <li><Link><i className='bx bx-info-circle' ></i><span>Ajuda e Suporte</span></Link></li>
+          </ul>
+
+          <ul className="menu-sidebar">
+            <li><Link className="logout"><i className='bx bx-log-out-circle' ></i> <span>Sair</span></Link></li>
+          </ul>
+
         </div>
-
-        <div className="profile">
-          <img src={Profile} alt="" />
-          <div>{username}</div>
-        </div>
-
-        <ul className="menu-sidebar">
-          <li><Link><i class='bx bx-user-circle'></i><span>Editar Perfil</span> </Link></li>
-          <li><Link><i class='bx bx-cog' ></i><span>Configurações</span></Link></li>
-          <li><Link><i class='bx bx-info-circle' ></i><span>Ajuda e Suporte</span></Link></li>
-        </ul>
-
-        <ul className="menu-sidebar logout">
-          <li><Link><i class='bx bx-log-out-circle' ></i> <span>Sair</span></Link></li>
-        </ul>
-
       </div>
-    </div>
+      {/* End Of SideBar */}
+
+      {/* NavBar */}
+      <div className={`navbar ${isSidebarClosed ? 'large' : ''}`}>
+        <i onClick={handleMenuClick} className='bx bx-menu'></i>
+        <input type="search" />
+        <button><i className='bx bx-search-alt-2' ></i></button>
+        <i className='bx bx-bell' ></i>
+      </div>
+    </>
   );
 }
 

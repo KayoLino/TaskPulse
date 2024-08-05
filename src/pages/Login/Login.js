@@ -10,6 +10,7 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [messageError, setMessageError] = useState('');
+  const [email, setEmail] = useState('');
 
   const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ const Login = () => {
 
     let foundUser = null;
     for (let user of usersCreate) {
-      if (username === user.username) {
+      if (username === user.username || email === user.email) {
         const isMatch = await bcrypt.compare(password, user.password);
         if (isMatch) {
           foundUser = user; //Salvando usuario
@@ -52,10 +53,11 @@ const Login = () => {
         onSubmit={handleSubmit}>
         <h1>Login</h1>
         <input type="text"
-          placeholder="Nome de Usuário"
-          value={username}
+          placeholder="Email"
+          value={username || email}
           onChange={(e) => {
-            setUsername(e.target.value)
+            setUsername(e.target.value) ||
+              setEmail(e.target.value);
           }} />
         <input type="password"
           placeholder="Senha"
